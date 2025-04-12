@@ -1,0 +1,21 @@
+# Ambientes virtuais
+.venv/
+venv/
+
+# Arquivos de cache do Python
+__pycache__/
+*.pyc
+
+# Logs de execução do Robot
+logs/
+output.xml
+report.html
+log.html
+
+# Arquivos temporários do VSCode
+.vscode/
+*.code-workspace
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
