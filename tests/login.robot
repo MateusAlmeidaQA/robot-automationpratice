@@ -1,50 +1,31 @@
 *** Settings ***
-Documentation         Cenários da página de Login
+Documentation         Cenarios da pagina de Login
 
-Resource              ../resources/base.robot
+Resource                          ../resources/base.robot
+Resource                          ../resources/locators/login_locators.robot
+Resource                          ../keywords/login_keywords.robot
 
-Test Setup            Setup Login
-Test Teardown         Take Screenshot
+Test Setup                        Setup Login
+Test Teardown                     Take Screenshot
 
 *** Test Cases ***
 
-Login válido
-    [Documentation]             Deve realizar login com sucesso
+Login valido
     [Tags]       valid_login
-    Fill Text    id=user        mateus@gmail.com
-    Fill Text    id=password    123456
-
-    Click        id=btnLogin
-
-    Wait For Elements State    css=.swal2-title    visible      5s
-    Get Text                   css=.swal2-title    equal        Login realizado
+    Realiza Login                  mateus@gmail.com    123456
+    Valida Login com sucesso
 
 Login sem credenciais
-    [Documentation]            Deve exibir mensagem de erro ao tentar login sem credenciais
     [Tags]       inv_login
-    Click        id=btnLogin
+    Realiza Login    ${EMPTY}      ${EMPTY}
+    Valida Mensagem de Erro        E-mail inválido.     
 
-    Wait For Elements State    css=.invalid_input    visible      5s
-    Get Text                   css=.invalid_input    equal        E-mail inválido.
-
-Login com senha inválida
-    [Documentation]             Deve exibir mensagem de erro ao tentar login com senha incorreta
+Login com senha invalida
     [Tags]       inv_pass
-    Fill Text    id=user        mateus@gmail.com
-    Fill Text    id=password    123
+    Realiza Login                  mateus@gmail.com      123
+    Valida Mensagem de Erro        Senha inválida.
 
-    Click        id=btnLogin
-
-    Wait For Elements State    css=.invalid_input    visible      5s
-    Get Text                   css=.invalid_input    equal        Senha inválida.
-
-Login com e-mail inválido
-    [Documentation]             Deve exibir mensagem de erro ao tentar login com email inválido
+Login com e-mail invalido
     [Tags]       inv_email
-    Fill Text    id=user        mateusgmail.com
-    Fill Text    id=password    123456
-
-    Click        id=btnLogin
-
-    Wait For Elements State    css=.invalid_input    visible      5s
-    Get Text                   css=.invalid_input    equal        E-mail inválido.
+    Realiza Login                   mateus.com.br        123456
+    Valida Mensagem de Erro         E-mail inválido.

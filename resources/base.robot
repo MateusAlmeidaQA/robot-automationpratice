@@ -1,6 +1,10 @@
 *** Settings ***
+Documentation        Arquivo base
 
 Library    Browser
+
+*** Variables ***
+${EMPTY}
 
 *** Keywords ***
 Iniciar sessão
