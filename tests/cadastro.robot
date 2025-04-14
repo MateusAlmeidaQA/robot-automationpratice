@@ -4,7 +4,6 @@ Documentation       Cenários da tela de Cadastros
 Resource            ../resources/base.robot
 Resource            ../resources/locators/cadastro_locators.robot
 Resource            ../keywords/cadastro_keywords.robot
-Resource            ../keywords/login_keywords.robot
 
 Test Setup          Setup Cadastro
 Test Teardown       Take Screenshot
