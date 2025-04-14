@@ -37,15 +37,13 @@ robot -i valid_login -d logs tests/login.robot
 
 - [x] Separação dos testes por arquivos (login e cadastro)
 - [x] Uso de `Test Setup` e `Test Teardown` para evitar repetições
-- [ ] Aplicação do padrão **Page Object Model (POM)**
-- [ ] Extração de seletores para arquivos dedicados (`locators`)
-- [ ] Criação de **keywords customizadas** reutilizáveis
-- [ ] Organização da estrutura em pastas: `tests/`, `resources/`, `keywords/`, `locators/`
-- [ ] Padronização de nomenclatura de testes e tags
-- [ ] Validação de mensagens de erro com dados dinâmicos
+- [x] Aplicação do padrão **Page Object Model (POM)**
+- [x] Extração de seletores para arquivos dedicados (`locators`)
+- [x] Criação de **keywords customizadas** reutilizáveis
+- [x] Organização da estrutura em pastas: `tests/`, `resources/`, `keywords/`, `locators/`
+- [x] Validação de mensagens de erro com dados dinâmicos
 - [ ] Criação de massa de dados para testes
 - [ ] Integração contínua com **GitHub Actions**
-- [ ] Documentação detalhada no `README.md` (como rodar, estrutura, dependências)
 - [ ] Adição de testes negativos com cenários mais variados
 - [ ] Implementação de testes parametrizados com `FOR` e variáveis
 
