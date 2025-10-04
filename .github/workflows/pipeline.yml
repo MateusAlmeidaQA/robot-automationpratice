@@ -13,11 +13,11 @@ jobs:
     - name: Robot Framework
       uses: joonvena/robotframework-docker-action@v1.0
       with:
-        robot_reports_dir: 'reports'
-        args: |
-          -v ${{ github.workspace }}/tests:/opt/robotframework/tests
-          -v ${{ github.workspace }}/resources:/opt/robotframework/resources
-          -v ${{ github.workspace }}/keywords:/opt/robotframework/keywords
+        robot_tests_dir: tests
+        robot_reports_dir: reports
+        robot_options: |
+          --pythonpath resources
+          --pythonpath keywords
 
     - name: Upload test results
       uses: actions/upload-artifact@v4
