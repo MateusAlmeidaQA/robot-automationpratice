@@ -16,8 +16,8 @@ jobs:
         robot_tests_dir: tests
         robot_reports_dir: reports
         robot_options: |
-          --pythonpath resources
-          --pythonpath keywords
+          --pythonpath ../resources
+          --pythonpath ../keywords
 
     - name: Upload test results
       uses: actions/upload-artifact@v4
