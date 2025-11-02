@@ -6,7 +6,7 @@ Resource        ../keywords/login_keywords.robot
 
 *** Variables ***
 ${EMPTY}
-${BASE_URL}        http://automationpratice.com.br
+${BASE_URL}        https://automationpratice.com.br
 
 *** Keywords ***
 Iniciar sessão

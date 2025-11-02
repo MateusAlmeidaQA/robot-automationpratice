@@ -8,7 +8,7 @@ Resource        ../../keywords/login_keywords.robot
 Resource        ../../keywords/shop/cart_keywords.robot
 
 Test Setup                        Inicia sessão e faz login
-Test Teardown                     Take Screenshot
+# Test Teardown                     Take Screenshot
 
 *** Test Cases ***
 Deve adicionar um item no carrinho

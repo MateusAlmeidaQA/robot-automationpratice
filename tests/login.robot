@@ -6,7 +6,7 @@ Resource                          ../resources/locators/login_locators.robot
 Resource                          ../keywords/login_keywords.robot
 
 Test Setup                        Setup Login
-Test Teardown                     Take Screenshot
+# Test Teardown                     Take Screenshot
 
 *** Test Cases ***
 
