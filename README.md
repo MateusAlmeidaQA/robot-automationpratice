@@ -43,8 +43,8 @@ robot -i valid_login -d logs tests/login.robot
 - [x] Organização da estrutura em pastas: `tests/`, `resources/`, `keywords/`, `locators/`
 - [x] Validação de mensagens de erro com dados dinâmicos
 - [ ] Criação de massa de dados para testes
-- [ ] Integração contínua com **GitHub Actions**
-- [ ] Adição de testes negativos com cenários mais variados
+- [x] Integração contínua com **GitHub Actions**
+- [x] Adição de testes negativos com cenários mais variados
 - [ ] Implementação de testes parametrizados com `FOR` e variáveis
 
 
