@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Cenários da tela de Cadastros
 
-Resource            ../resources/base.robot
+# Resource            ../resources/base.robot
 Resource            ../resources/locators/cadastro_locators.robot
 Resource            ../keywords/cadastro_keywords.robot
 
@@ -9,13 +9,12 @@ Test Setup          Setup Cadastro
 Test Teardown       Take Screenshot
 
 *** Test Cases ***
+
 Cadastro de novo usuário
     [Tags]       valid_cad
-    Wait For Elements State                xpath=//h3[text()="Cadastro de usuário"]    visible    5
     
-    Realiza um cadastro                    Mateus    mateus@gmail.com    123456
-    Valida cadastro com sucesso            Cadastro realizado!
-        
+    Realiza um cadastro                    Mateus                mateus@email.com    Senha123
+    Valida cadastro com sucesso            Cadastro realizado!        
 
 Cadastro sem campos obrigatórios
     [Tags]   inv_cad

@@ -6,10 +6,10 @@ Resource                           ../resources/locators/login_locators.robot
 
 *** Keywords ***
 Realiza Login
-    [Arguments]                    ${EMAIL}                ${PASSWORD}     
+    [Arguments]                    ${EMAIL}                    ${PASSWORD}     
 
-    Fill Text                      ${INPUT_EMAIL}          ${EMAIL}
-    Fill Text                      ${INPUT_PASSWORD}       ${PASSWORD}
+    Fill Text                      ${INPUT_USERNAME}           ${EMAIL}
+    Fill Text                      ${INPUT_PASSWORD}           ${PASSWORD}
     Click                          ${BTN_LOGIN}
 
 Valida Login com sucesso

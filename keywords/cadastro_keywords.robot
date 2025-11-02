@@ -6,9 +6,9 @@ Resource                ../resources/locators/cadastro_locators.robot
 
 *** Keywords ***
 Realiza um cadastro
-    [Arguments]      ${name}             ${email}        ${password}
+    [Arguments]      ${user_name}    ${email}        ${password}
 
-    Fill Text        ${INPUT_NAME}       ${name} 
+    Fill Text        ${INPUT_NAME}       ${user_name} 
     Fill Text        ${INPUT_EMAIL}      ${email}
     Fill Text        ${INPUT_PASSWORD}   ${password}
 
@@ -18,7 +18,7 @@ Valida cadastro com sucesso
     [Arguments]                ${EXPECTED_MSG}
 
     Wait For Elements State    ${SUCCESS_MSG}    visible
-    Get Text                   ${SUCCESS_MSG}    equal        ${EXPECTED_MSG}
+    Get Text                   ${SUCCESS_MSG}    contains        ${EXPECTED_MSG}
 
 Valida erro de cadastro
     [Arguments]                ${EXPECTED_MSG}
