@@ -6,7 +6,7 @@ Resource            ../resources/locators/cadastro_locators.robot
 Resource            ../keywords/cadastro_keywords.robot
 
 Test Setup          Setup Cadastro
-# Test Teardown       Take Screenshot
+Test Teardown       Take Screenshot
 
 *** Test Cases ***
 
